@@ -3,5 +3,3 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
-
-// This configuration file is used by Vercel to define custom routing rules for the application.
