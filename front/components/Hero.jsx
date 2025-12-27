@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Github } from "lucide-react";
+import heroImage from "../src/assets/hero.png";
 
 export default function HeroSection() {
   const [displayText, setDisplayText] = useState("");
@@ -46,7 +47,7 @@ export default function HeroSection() {
           <div className="absolute inset-0 border border-dashed border-cyan-500/30 rounded-full animate-spin-slow"></div>
           <div className="absolute inset-2 bg-gray-900 rounded-2xl border border-cyan-500/30 overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.15)]">
             <img
-              src="../src/assets/hero.png"
+              src={heroImage}
               alt="Anish Aryal"
               className="w-full h-full object-cover grayscale contrast-125 brightness-90 sepia-[.5] hue-rotate-[170deg]"
             />
@@ -179,7 +180,7 @@ export default function HeroSection() {
           <div className="relative bg-gray-900 p-1.5 rounded-lg border border-gray-700 shadow-xl">
             <div className="relative overflow-hidden rounded bg-black aspect-[3/4]">
               <img
-                src="../src/assets/hero.png"
+                src={heroImage}
                 alt="Anish Aryal"
                 className="w-full h-full object-cover filter grayscale contrast-125 brightness-90 sepia-[.5] hue-rotate-[170deg]"
               />
@@ -314,7 +315,7 @@ export default function HeroSection() {
 
             <div className="relative overflow-hidden rounded bg-black aspect-[3/4] group-hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-shadow duration-500">
               <img
-                src="../src/assets/hero.png"
+                src={heroImage}
                 alt="Anish Aryal"
                 className="w-full h-full object-cover grayscale contrast-125 brightness-90 sepia-[.5] hue-rotate-[170deg] group-hover:grayscale-0 group-hover:sepia-0 group-hover:brightness-100 transition-all duration-700"
               />
