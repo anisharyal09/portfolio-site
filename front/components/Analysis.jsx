@@ -49,7 +49,7 @@ export default function Research() {
         </Link>
       </div>
 
-      {/* Footer System Code */}
+      {/* Footer System */}
       <div className="absolute bottom-8 left-0 w-full text-center">
         <p className="text-[10px] font-mono text-gray-600 uppercase tracking-[0.2em]">
           // Learning...

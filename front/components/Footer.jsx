@@ -8,6 +8,7 @@ export default function Footer({ onShowPolicies }) {
   return (
     <footer className="w-full bg-black py-8 border-t border-cyan-900/50 relative z-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+        
         {/* === LEFT: BRANDING / COPYRIGHT === */}
         <div className="flex items-center gap-2 text-gray-500 font-mono text-xs">
           <Copyright size={14} className="text-cyan-400" />
@@ -16,6 +17,7 @@ export default function Footer({ onShowPolicies }) {
 
         {/* === RIGHT: UTILITY BAR === */}
         <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 text-gray-600">
+          
           {/* 1. UTILITY LINK 1: Contact Module */}
           <Link
             to="/getintouch"
@@ -28,7 +30,7 @@ export default function Footer({ onShowPolicies }) {
 
           {/* 2. UTILITY LINK 2: System Policies*/}
           <a
-            // CRITICAL: Prevent the browser from trying to navigate away
+            // Prevent the browser from trying to navigate away
             onClick={(e) => {
               e.preventDefault();
               onShowPolicies();

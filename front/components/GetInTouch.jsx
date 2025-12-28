@@ -5,15 +5,12 @@ import { Zap } from "lucide-react";
 export default function GetInTouch() {
   return (
     <section className="relative w-full pt-18 pb-32 flex flex-col items-center">
-      {/* =========================================
-          1. TOP FADE
-         ========================================= */}
-      <div className="absolute top-0 left-0 w-full h-45 bg-gradient-to-b from-black/50 to-transparent z-20 pointer-events-none"></div>
+      
+      {/* 1. TOP FADE */}
+      <div className="absolute top-0 left-0 w-full h-36 bg-gradient-to-b from-black/50 to-transparent z-20 pointer-events-none"></div>
 
 
-      {/* =========================================
-          2. MAIN CONTENT (z-10)
-         ========================================= */}
+      {/* 2. MAIN CONTENT (z-10) */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
         {/* --- HEADER --- */}
         <div className="text-center mb-16 animate-fade-in-up">
@@ -139,7 +136,7 @@ export default function GetInTouch() {
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-default">
                 <Zap size={12} className="text-cyan-400 animate-pulse" />
                 <span className="text-[10px] font-mono text-gray-400 tracking-widest uppercase">
-                  STATUS: CONNECTIING
+                  STATUS: CONNECTING
                   {/* The Dynamic Typing Dots */}
                   <span className="typing-dots">
                     <span className="dot" style={{ animationDelay: "0s" }}>
@@ -159,10 +156,8 @@ export default function GetInTouch() {
         </div>
       </div>
 
-      {/* =========================================
-          3. BOTTOM FADE
-         ========================================= */}
-      <div className="absolute bottom-0 left-0 w-full h-45 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
+      {/* 3. BOTTOM FADE */}
+      <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
 
       <style>{`
         /* 1. KEYFRAME DEFINITIONS */

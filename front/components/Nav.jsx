@@ -91,9 +91,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* ==================================================
-           --- MOBILE FULLSCREEN MENU DRAWER ---
-           ================================================== */}
+      {/* --- MOBILE FULLSCREEN MENU DRAWER --- */}
       <div
         className={`fixed inset-0 z-40 bg-black/95 transition-transform duration-300 lg:hidden flex flex-col items-center justify-start pt-24 ${
           open ? "translate-x-0" : "translate-x-full"
@@ -106,7 +104,6 @@ export default function Header() {
             <Link
               key={item}
               to={"/" + item.toLowerCase()}
-              // --- THE FIX IS HERE ---
               onClick={() => setOpen(false)}
               className="group flex items-center justify-between py-4 border-b border-white/10 text-xl font-mono text-gray-300 hover:text-white transition-all cursor-pointer"
             >

@@ -108,14 +108,10 @@ const EducationCard = ({ data, index }) => {
 export default function Education() {
   return (
     <section className="relative w-full py-32">
-      {/* =========================================
-          1. TOP FADE
-         ========================================= */}
-      <div className="absolute top-0 left-0 w-full h-45 bg-gradient-to-b from-black/50 to-transparent z-20 pointer-events-none"></div>
+      {/* 1. TOP FADE */}
+      <div className="absolute top-0 left-0 w-full h-36 bg-gradient-to-b from-black/50 to-transparent z-20 pointer-events-none"></div>
 
-      {/* =========================================
-          2. CONTENT
-         ========================================= */}
+      {/* 2. CONTENT */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16 w-full animate-fade-in-up">
@@ -146,10 +142,8 @@ export default function Education() {
         </div>
       </div>
 
-      {/* =========================================
-          3. BOTTOM FADE
-         ========================================= */}
-      <div className="absolute bottom-0 left-0 w-full h-45 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
+      {/* 3. BOTTOM FADE */}
+      <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
 
       <style jsx>{`
         @keyframes fadeInUp {

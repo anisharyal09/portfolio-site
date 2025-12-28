@@ -96,14 +96,10 @@ const TechNode = ({ name, type = "core" }) => {
 export default function Skill() {
   return (
     <section className="min-h-screen w-full text-white relative overflow-hidden py-32 flex flex-col items-center justify-center">
-      {/* =========================================
-          1. TOP FADE
-         ========================================= */}
-      <div className="absolute top-0 left-0 w-full h-45 bg-gradient-to-b from-black/50 to-transparent z-20 pointer-events-none"></div>
+      {/* 1. TOP FADE */}
+      <div className="absolute top-0 left-0 w-full h-36 bg-gradient-to-b from-black/50 to-transparent z-20 pointer-events-none"></div>
 
-      {/* =========================================
-          2. MAIN CONTENT
-         ========================================= */}
+      {/* 2. MAIN CONTENT */}
 
       <div className="max-w-6xl mx-auto px-6 lg:px-12 relative z-20 w-full mb-12">
         {/* HEADER */}
@@ -178,7 +174,7 @@ export default function Skill() {
         </div>
       </div>
 
-      {/* FOOTER STATUS */}
+      {/* 3. FOOTER STATUS */}
       <div
         className="relative z-20 mt-12 animate-fade-in-up"
         style={{ animationDelay: "400ms" }}
@@ -191,10 +187,8 @@ export default function Skill() {
         </div>
       </div>
 
-      {/* =========================================
-          3. BOTTOM FADE 
-         ========================================= */}
-      <div className="absolute bottom-0 left-0 w-full h-45 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
+      {/* 4. BOTTOM FADE  */}
+      <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
 
       {/* ANIMATIONS */}
       <style jsx>{`

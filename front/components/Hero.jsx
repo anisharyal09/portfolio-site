@@ -39,6 +39,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      
       {/* 1. MOBILE VIEW */}
       <div className="md:hidden flex flex-col items-center justify-center w-full px-6 relative z-10 gap-8 py-20">
         <div className="relative w-64 h-64 group animate-fade-in-scale">
@@ -346,8 +347,9 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* --- THE FADE --- */}
-      <div className="absolute bottom-0 left-0 w-full h-45 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
+      {/* 4. BOTTOM FADE */}
+      <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
+
     </section>
   );
 }
