@@ -64,7 +64,7 @@ export default function GetInTouch() {
     } else {
       setFormData({ name: "", email: "", message: "" });
       setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 2700);
+      setTimeout(() => setShowSuccess(false), 3060);
     }
   };
 
