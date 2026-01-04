@@ -52,7 +52,7 @@ export default function Header() {
             <span className="text-white font-bold tracking-wide text-sm font-mono group-hover:text-cyan-400 transition-colors">
               ARYAL<span className="text-cyan-500">_</span>SYSTEMS
             </span>
-            <span className="text-[10px] text-cyan-500 font-mono">v.4.0</span>
+            <span className="text-[9px] m-0.3 text-cyan-500 font-mono">@anisharyal09</span>
           </div>
         </Link>
 

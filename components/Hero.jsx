@@ -9,10 +9,10 @@ export default function HeroSection() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const words = [
-    "Aspriring Engineer",
+    "Aspiring Engineer",
+    "Problem Solver",
     "Innovator",
     "Creative Developer",
-    "Problem Solver",
   ];
   const currentFullWord = words[wordIndex];
   const article = /^[aeiou]/i.test(currentFullWord) ? "an" : "a";
@@ -39,11 +39,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      
       {/* 1. MOBILE VIEW */}
       <div className="md:hidden flex flex-col items-center justify-center w-full px-6 relative z-10 gap-8 py-20">
         <div className="relative w-64 h-64 group animate-fade-in-scale">
-
           {/* ... image container code ... */}
           <div className="absolute inset-0 border border-dashed border-cyan-500/30 rounded-full animate-spin-slow"></div>
           <div className="absolute inset-2 bg-gray-900 rounded-2xl border border-cyan-500/30 overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.15)]">
@@ -189,7 +187,7 @@ export default function HeroSection() {
               <div className="absolute bottom-2 right-2 bg-black/80 px-2 py-1 rounded border border-cyan-500/30">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                  <span className="text-[10px] text-cyan-400 font-mono">
+                  <span className="text-[11px] text-cyan-400 font-mono">
                     ONLINE
                   </span>
                 </div>
@@ -230,8 +228,8 @@ export default function HeroSection() {
 
           <div className="mt-8 flex gap-4">
             <Link
-              to="/getintouch" // Use desired route path
-              className="px-8 py-3 bg-cyan-900/20 border border-cyan-500/30 text-cyan-400 font-mono text-sm hover:bg-cyan-500/20 hover:border-cyan-400 transition-all uppercase tracking-wider flex items-center justify-center"
+              to="/getintouch"
+              className="whitespace-nowrap px-8 py-3 bg-cyan-900/20 border border-cyan-500/30 text-cyan-400 font-mono text-sm hover:bg-cyan-500/20 hover:border-cyan-400 transition-all uppercase tracking-wider flex items-center justify-center"
             >
               &lt;Contact /&gt;
             </Link>
@@ -248,48 +246,116 @@ export default function HeroSection() {
         </div>
 
         {/* MIDDLE: DECORATION */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] pointer-events-none opacity-30 z-0">
-          
-          {/* ... SVG path code ... */}
-          <svg width="100%" height="100%" viewBox="0 0 400 200">
-            <path
-              d="M 0 100 L 150 100 L 180 50 L 220 50 L 250 100 L 400 100"
-              stroke="url(#busGradient)"
-              strokeWidth="2"
-              fill="none"
-            />
-            <path
-              d="M 0 110 L 140 110 L 170 160 L 230 160 L 260 110 L 400 110"
-              stroke="url(#busGradient)"
-              strokeWidth="2"
-              fill="none"
-              opacity="0.6"
-            />
-            <circle r="3" fill="#00FFFF">
-              <animateMotion
-                dur="3s"
-                repeatCount="indefinite"
-                path="M 0 100 L 150 100 L 180 50 L 220 50 L 250 100 L 400 100"
-              />
-            </circle>
-            <circle r="3" fill="#3b82f6">
-              <animateMotion
-                dur="4s"
-                repeatCount="indefinite"
-                path="M 400 110 L 260 110 L 230 160 L 170 160 L 140 110 L 0 110"
-              />
-            </circle>
-            <defs>
-              <linearGradient id="busGradient" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="transparent" />
-                <stop offset="20%" stopColor="#06b6d4" />
-                <stop offset="80%" stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="transparent" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-cyan-500/20 bg-black/50 backdrop-blur px-4 py-1 rounded font-mono text-[10px] text-cyan-500">
-            LOGIC: AND
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] pointer-events-none z-0 hidden lg:block">
+          <div className="relative w-full h-full flex items-center justify-center group pointer-events-auto">
+            <div className="absolute w-40 h-40 bg-cyan-500/5 blur-[60px] rounded-full group-hover:bg-cyan-500/10 transition-all duration-1000" />
+
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 400 200"
+              className="overflow-visible"
+            >
+              <defs>
+                <linearGradient id="syncGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="transparent" />
+                  <stop offset="50%" stopColor="#06b6d4" />
+                  <stop offset="100%" stopColor="transparent" />
+                </linearGradient>
+              </defs>
+
+              {/* Synchronized Circuitry */}
+              <g fill="none" strokeWidth="1.5" strokeLinecap="round">
+                {/* --- INPUTS --- */}
+                <text
+                  x="65"
+                  y="75"
+                  className="fill-cyan-500/40 font-mono text-[5px] uppercase tracking-widest"
+                >
+                  SIG_SW
+                </text>
+                <path
+                  d="M 70 80 L 150 80 L 185 95"
+                  stroke="rgba(6, 182, 212, 0.05)"
+                />
+                <path
+                  d="M 70 80 L 150 80 L 185 95"
+                  stroke="url(#syncGrad)"
+                  className="inp-packet"
+                />
+
+                <text
+                  x="65"
+                  y="130"
+                  className="fill-cyan-500/40 font-mono text-[5px] uppercase tracking-widest"
+                >
+                  SIG_HW
+                </text>
+                <path
+                  d="M 70 120 L 150 120 L 185 105"
+                  stroke="rgba(6, 182, 212, 0.05)"
+                />
+                <path
+                  d="M 70 120 L 150 120 L 185 105"
+                  stroke="url(#syncGrad)"
+                  className="inp-packet"
+                />
+
+                {/* --- OUTPUT --- */}
+                <text
+                  x="240"
+                  y="90"
+                  className="fill-cyan-500/40 font-mono text-[5px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  SYSTEM_OUTPUT
+                </text>
+                <path
+                  d="M 215 100 L 330 100"
+                  stroke="rgba(6, 182, 212, 0.05)"
+                />
+                <path
+                  d="M 215 100 L 330 100"
+                  stroke="url(#syncGrad)"
+                  className="out-packet"
+                />
+
+                <circle cx="330" cy="100" r="2" className="node-status" />
+              </g>
+
+              {/* The AND Junction Box */}
+              <g className="logic-core">
+                <rect
+                  x="185"
+                  y="88"
+                  width="30"
+                  height="24"
+                  rx="1"
+                  fill="#000"
+                  stroke="rgba(6, 182, 212, 0.3)"
+                  strokeWidth="0.5"
+                />
+                <text
+                  x="200"
+                  y="103"
+                  textAnchor="middle"
+                  className="fill-cyan-500/40 font-mono text-[7px] font-bold tracking-[0.2em]"
+                >
+                  AND
+                </text>
+              </g>
+            </svg>
+
+            {/* Hover Overlay */}
+            <div className="absolute bottom-12 opacity-0 group-hover:opacity-100 transition-all duration-500">
+              <div className="bg-black/90 border-l-2 border-cyan-500 px-3 py-1.5 backdrop-blur-sm">
+                <p className="font-mono text-[9px] text-cyan-400 tracking-widest uppercase">
+                  Fusing HW & SW
+                </p>
+                <p className="text-[6px] text-gray-600 font-mono uppercase tracking-tighter mt-1">
+                  Logic_State: 1
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -350,6 +416,56 @@ export default function HeroSection() {
       {/* 4. BOTTOM FADE */}
       <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-t from-black/50 to-transparent z-20 pointer-events-none"></div>
 
+      <style>{`
+    /* Input Packets: 0% to 45% */
+    @keyframes input-flow {
+      0% { stroke-dashoffset: 100; opacity: 0; }
+      10% { opacity: 1; }
+      45% { stroke-dashoffset: 0; opacity: 1; }
+      46%, 100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+
+    /* Logic Processing: 45% to 55% */
+    @keyframes core-process {
+      0%, 44% { filter: drop-shadow(0 0 0px #06b6d4); transform: scale(1); border-color: rgba(6, 182, 212, 0.2); }
+      50% { filter: drop-shadow(0 0 10px #06b6d4); transform: scale(1.05); border-color: #06b6d4; }
+      56%, 100% { filter: drop-shadow(0 0 0px #06b6d4); transform: scale(1); border-color: rgba(6, 182, 212, 0.2); }
+    }
+
+    /* Output Packet: 55% to 90% */
+    @keyframes output-flow {
+      0%, 54% { stroke-dashoffset: 100; opacity: 0; }
+      60% { opacity: 1; }
+      90% { stroke-dashoffset: 0; opacity: 1; }
+      91%, 100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+
+    /* Output Indicator Pulse: 90% to 100% */
+    @keyframes output-node-pulse {
+      0%, 89% { r: 1.5; fill: rgba(34, 211, 238, 0.2); }
+      92% { r: 4; fill: #fff; filter: drop-shadow(0 0 8px #06b6d4); }
+      100% { r: 2; fill: #06b6d4; }
+    }
+
+    .inp-packet {
+      stroke-dasharray: 15 85;
+      animation: input-flow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .out-packet {
+      stroke-dasharray: 20 80;
+      animation: output-flow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .logic-core {
+      animation: core-process 3s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .node-status {
+      animation: output-node-pulse 3s ease-in-out infinite;
+    }
+      `}</style>
     </section>
   );
 }
