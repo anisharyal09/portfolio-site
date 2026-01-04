@@ -1,7 +1,7 @@
 # ⚡ ARYAL_SYSTEMS
 
 > **Status:** Active  
-> **Live:** https://portfolio-site-pi-two.vercel.app/
+> **Live:** https://portfolio-site-anish-aryals-projects-304c0381.vercel.app
 
 A personal portfolio system built with **React**, **Vite**, **Tailwind CSS**, and **Supabase**.  
 Focused on clean structure, controlled visuals, and functional UI — not gimmicks.
